@@ -97,7 +97,8 @@ spec:
             - name: socket-dir
               mountPath: /csi
         - name: hostpath
-          image: quay.io/k8scsi/hostpathplugin:v1.2.0
+          image: quay.io/nrb/hostpathplugin:latest
+          imagePullPolicy: IfNotPresent
           args:
             - "--v=5"
             - "--endpoint=$(CSI_ENDPOINT)"
